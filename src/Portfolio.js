@@ -1,21 +1,22 @@
-import React from "react"
+import React from 'react';
 import './Portfolio.css';
 
 function Portfolio() {
 
   return (
+
     <div className='pagebackground'>
 
       <div className='navbar'>
         <div className='navbar-content'>
-          <div>Home</div>
-          <div>About</div>
-          <div>Projects</div>
-          <div>Contact</div>
+          <div><a href="#home-section">Home</a></div>
+          <div><a href="#about-section">About</a></div>
+          <div><a href="#projects-section">Projects</a></div>
+          <div><a href="#contact-section">Contact</a></div>
         </div>
       </div>
       <div className="blob"></div>
-      <div className="header-container">
+      <div className="header-container" id="home-section">
         <div className="name">
           <div className="name-row1">Hey, I am</div>
           <div className="name-row2"><span style={{ color: "#D800DC" }}>Asmeet</span>  Singh</div>
@@ -31,7 +32,7 @@ function Portfolio() {
         <img className="content-arrow" src={require("./assets/down-arrow.png")} alt="" />
       </div>
 
-      <div className="about-section">
+      <section id="about-section">
         <div class="section-header">ABOUT</div>
         <div class="section-content">Software developer and UI/UX designer currently pursuing my B.Tech in Computer Science from Jaypee Institute of Information Technology, Noida. I bring a unique blend of technical expertise and creative flair to the table. With a keen eye for design and a strong coding foundation, I enjoy creating intuitive and visually appealing digital experiences. <br></br><br></br><br></br><br></br></div>
         <div className="section-content">TECHNICAL SKILLS: </div>
@@ -49,18 +50,18 @@ function Portfolio() {
           <img className="skill-icon" src={require("./assets/illustrator.png")} alt="" />
           <img className="skill-icon" src={require("./assets/installshield.png")} alt="" />
         </div>
-      </div>
+      </section>
 
-      <div className="projects-section">
+      <section id="projects-section">
         <div class="section-header">PROJECTS</div>
-      </div>
+      </section>
 
-      <div className="contact-section">
-       <div class="section-header">CONTACT ME</div>
-       <div class="section-content">Email: asmeet003@gmail.com<br></br>Linkedin: www.linkedin.com/in/asmeet3</div>
-      </div>
+      <section id="contact-section">
+        <div class="section-header">CONTACT ME</div>
+        <div class="section-content">Email: asmeet003@gmail.com<br></br>Linkedin: www.linkedin.com/in/asmeet3</div>
+      </section>
 
-      <div className="page-end"/>
+      <div className="page-end" />
 
     </div>
   );
