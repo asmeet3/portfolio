@@ -3,16 +3,22 @@ import './Portfolio.css';
 
 function Portfolio() {
 
+  function scrollToSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
   return (
 
     <div className='pagebackground'>
 
       <div className='navbar'>
         <div className='navbar-content'>
-          <div><a href="#home-section">Home</a></div>
-          <div><a href="#about-section">About</a></div>
-          <div><a href="#projects-section">Projects</a></div>
-          <div><a href="#contact-section">Contact</a></div>
+          <div><button onClick={() => scrollToSection('home-section')}>Home</button></div>
+          <div><button onClick={() => scrollToSection('about-section')}>About</button></div>
+          <div><button onClick={() => scrollToSection('projects-section')}>Projects</button></div>
+          <div><button onClick={() => scrollToSection('contact-section')}>Contact</button></div>
         </div>
       </div>
       <div className="blob"></div>
@@ -33,8 +39,8 @@ function Portfolio() {
       </div>
 
       <section id="about-section">
-        <div class="section-header">ABOUT</div>
-        <div class="section-content">Software developer and UI/UX designer currently pursuing my B.Tech in Computer Science from Jaypee Institute of Information Technology, Noida. I bring a unique blend of technical expertise and creative flair to the table. With a keen eye for design and a strong coding foundation, I enjoy creating intuitive and visually appealing digital experiences. <br></br><br></br><br></br><br></br></div>
+        <div className="section-header">ABOUT</div>
+        <div className="section-content">Software developer and UI/UX designer currently pursuing my B.Tech in Computer Science from Jaypee Institute of Information Technology, Noida. I bring a unique blend of technical expertise and creative flair to the table. With a keen eye for design and a strong coding foundation, I enjoy creating intuitive and visually appealing digital experiences. <br></br><br></br><br></br><br></br></div>
         <div className="section-content">TECHNICAL SKILLS: </div>
         <div className="skills">
           <img className="skill-icon" src={require("./assets/cpp.png")} alt="" />
@@ -42,8 +48,6 @@ function Portfolio() {
           <img className="skill-icon" src={require("./assets/javascript.png")} alt="" />
           <img className="skill-icon" src={require("./assets/html.png")} alt="" />
           <img className="skill-icon" src={require("./assets/css.png")} alt="" />
-          <img className="skill-icon" src={require("./assets/flask.png")} alt="" />
-          <img className="skill-icon" src={require("./assets/firebase.png")} alt="" />
           <img className="skill-icon" src={require("./assets/sql.png")} alt="" />
           <img className="skill-icon" src={require("./assets/figma.png")} alt="" />
           <img className="skill-icon" src={require("./assets/photoshop.png")} alt="" />
@@ -53,12 +57,24 @@ function Portfolio() {
       </section>
 
       <section id="projects-section">
-        <div class="section-header">PROJECTS</div>
+        <div className="section-header">PROJECTS</div>
+        <div className="section-content">
+          <b>Labour Link:</b> A platform to tackle the challenges linked with sourcing dependable laborers for critical tasks such as plumbing, electrical work, gardening, and housekeeping.<br></br><br></br>
+          <b>Insightify:</b> A tool to help people quickly find information in PDF documents and summarize it. It's designed to make searching and understanding PDFs easier and faster.<br></br><br></br>
+          <div className="project-frames">
+            <div className="project-rectangle">
+            <img className="labourlink-screenshot" src={require("./assets/labourlink.png")} alt="" />
+            </div>
+            <div className="project-rectangle">
+            <img className="insightify-screenshot" src={require("./assets/insightify.png")} alt="" />
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="contact-section">
-        <div class="section-header">CONTACT ME</div>
-        <div class="section-content">Email: asmeet003@gmail.com<br></br>Linkedin: www.linkedin.com/in/asmeet3</div>
+        <div className="section-header">CONTACT ME</div>
+        <div className="section-content">Email: asmeet003@gmail.com<br></br>Linkedin: www.linkedin.com/in/asmeet3</div>
       </section>
 
       <div className="page-end" />
