@@ -324,7 +324,7 @@ button {
     }
 
     .blob {
-        left: 190px;
+        left: 180px;
         top: 70px;
         position: absolute;
         width: 210px;
@@ -338,7 +338,7 @@ button {
         border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
     }
     .blob:hover{
-        left: 190px;
+        left: 180px;
         top: 70px;
         position: absolute;
         width: 210px;
