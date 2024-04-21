@@ -217,6 +217,10 @@ button {
     height: 100%;
     border-radius: 10px;
 }
+.page-end {
+    min-height: 100px;
+    border-bottom: 6px solid #4a004b;
+}
 
 @media only screen and (max-width: 600px) {
     .project-frames {
@@ -351,10 +355,8 @@ button {
             inset 100px 100px 0 0px #000000;
         border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
     }
-}
-
-
-.page-end {
-    min-height: 100px;
-    border-bottom: 6px solid #4a004b;
+    .page-end {
+        min-height: 80px;
+        border-bottom: 4px solid #4a004b;
+    }
 }
